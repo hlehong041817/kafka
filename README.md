@@ -17,3 +17,12 @@ def step_impl(context):
     
 
 
+https://github.com/noirbizarre/flask-restplus/issues/37
+
+FlaskRestful version). Instead of
+
+'checks': restplus.fields.List(restplus.fields.Nested(Check))
+you can write:
+
+'checks': api.as_list(restplus.fields.Nested(Check)),
+
